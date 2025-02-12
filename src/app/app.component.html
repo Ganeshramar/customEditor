@@ -1,4 +1,13 @@
-<!-- <app-custom-editor></app-custom-editor> -->
 <form [formGroup]="editorForm">
   <app-custom-editor formControlName="editorContent"></app-custom-editor>
+  
+  <div class="toolbar">
+    <button type="button" (click)="downloadContent('image')">
+      <i class="fa-solid fa-download"></i> Download as Image
+    </button>
+
+    <button type="button" (click)="downloadContent()">
+      <i class="fa-solid fa-file-arrow-down"></i> Download as Text
+    </button>
+  </div>
 </form>
